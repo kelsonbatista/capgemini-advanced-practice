@@ -7,6 +7,8 @@ import { FirstComponentComponent } from './first-component/first-component.compo
 import { SecondComponentComponent } from './second-component/second-component.component';
 import { MultiplicaPorPipe } from './multiplica-por.pipe';
 import { CustomizedPipeComponent } from './customized-pipe/customized-pipe.component';
+import { TwoWayDataBindComponent } from './two-way-data-bind/two-way-data-bind.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { CustomizedPipeComponent } from './customized-pipe/customized-pipe.compo
     FirstComponentComponent,
     SecondComponentComponent,
     MultiplicaPorPipe,
-    CustomizedPipeComponent
+    CustomizedPipeComponent,
+    TwoWayDataBindComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
