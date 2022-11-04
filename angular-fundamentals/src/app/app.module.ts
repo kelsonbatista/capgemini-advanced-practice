@@ -10,6 +10,7 @@ import { CustomizedPipeComponent } from './customized-pipe/customized-pipe.compo
 import { TwoWayDataBindComponent } from './two-way-data-bind/two-way-data-bind.component';
 import { FormsModule } from '@angular/forms';
 import { ListRenderingComponent } from './list-rendering/list-rendering.component';
+import { CustomComponentComponent } from './custom-component/custom-component.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ListRenderingComponent } from './list-rendering/list-rendering.componen
     MultiplicaPorPipe,
     CustomizedPipeComponent,
     TwoWayDataBindComponent,
-    ListRenderingComponent
+    ListRenderingComponent,
+    CustomComponentComponent
   ],
   imports: [
     BrowserModule,
