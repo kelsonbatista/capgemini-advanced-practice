@@ -13,6 +13,7 @@ import { ListRenderingComponent } from './list-rendering/list-rendering.componen
 import { CustomComponentComponent } from './custom-component/custom-component.component';
 import { ParentComponentComponent } from './parent-component/parent-component.component';
 import { ChildComponentComponent } from './child-component/child-component.component';
+import { Services1Component } from './services1/services1.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ChildComponentComponent } from './child-component/child-component.compo
     ListRenderingComponent,
     CustomComponentComponent,
     ParentComponentComponent,
-    ChildComponentComponent
+    ChildComponentComponent,
+    Services1Component
   ],
   imports: [
     BrowserModule,
