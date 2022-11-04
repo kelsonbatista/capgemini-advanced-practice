@@ -13,6 +13,7 @@ const routes: Routes = [
   { path: "page3", component: ThirdPageComponent },
   { path: "", redirectTo: "page1", pathMatch: 'full' },
   { path: "pageparameters/:id", component: ParametersPageComponent },
+  { path: 'lazyloading', loadChildren: () => import('./lazy-loading/lazy-loading.module').then(m => m.LazyLoadingModule) },
   { path: "**", component: NotFoundComponent },
 ]
 
