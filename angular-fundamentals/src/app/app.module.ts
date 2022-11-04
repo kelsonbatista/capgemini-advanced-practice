@@ -14,6 +14,7 @@ import { CustomComponentComponent } from './custom-component/custom-component.co
 import { ParentComponentComponent } from './parent-component/parent-component.component';
 import { ChildComponentComponent } from './child-component/child-component.component';
 import { Services1Component } from './services1/services1.component';
+import { Services2Component } from './services2/services2.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { Services1Component } from './services1/services1.component';
     CustomComponentComponent,
     ParentComponentComponent,
     ChildComponentComponent,
-    Services1Component
+    Services1Component,
+    Services2Component
   ],
   imports: [
     BrowserModule,
