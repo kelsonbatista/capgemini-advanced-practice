@@ -1,0 +1,10 @@
+.lista-produtos span {
+  background-color: green;
+  color: white;
+}
+
+.lista-produtos .esgotado {
+  display: inline-block;
+  background-color: red;
+  color: white;
+}
