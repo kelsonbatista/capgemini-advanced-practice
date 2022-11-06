@@ -1,0 +1,26 @@
+<section class="students">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Score 1</th>
+        <th scope="col">Score 2</th>
+        <th scope="col">Average</th>
+        <th scope="col">Status</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of studentService.students">
+        <td>{{ student.name }}</td>
+        <td>{{ student.score1 }}</td>
+        <td>{{ student.score2 }}</td>
+        <td>{{ student.average }}</td>
+        <td>{{ student.status == true ? "Aprovado" : "Reprovado" }}</td>
+        <td>Edit</td>
+        <td>Delete</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
