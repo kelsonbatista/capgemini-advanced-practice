@@ -1,0 +1,81 @@
+<section class="score">
+  <h1>Student Score</h1>
+  <form class="score__form" [formGroup]="studentForm" (ngSubmit)="addStudent()">
+      <div class="form-group">
+        <label for="name">Student name:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          name='name'
+          [(ngModel)]='student.name'
+          placeholder="Digite o nome do aluno"
+          placeholder='Digite seu nome'
+          formControlName='name'
+          [class.valid]="studentForm.controls.name.valid"
+          [class.invalid]="studentForm.controls.name.invalid && 
+          (studentForm.controls.name.touched || studentForm.controls.name.dirty)"
+        />
+      </div>
+      <div *ngIf="studentForm.controls.name.invalid && 
+      (studentForm.controls.name.touched || studentForm.controls.name.dirty)">
+        <small class="error-message" *ngIf="studentForm.controls.name.hasError('minlength')">
+          Names must have at least 5 characters
+        </small>
+        <small class="error-message" *ngIf="studentForm.controls.name.hasError('required')">
+          Name is required
+        </small>
+      </div>
+      <div class="form-group score__score">
+        <label for="score1">Score 1:</label>
+        <input
+          type="number"
+          class="form-control"
+          id="score1"
+          name='score1'
+          min='0'
+          max='10'
+          [(ngModel)]='student.score1'
+          formControlName='score1'
+          [class.valid]="studentForm.controls.score1.valid"
+          [class.invalid]="studentForm.controls.score1.invalid && 
+          (studentForm.controls.score1.touched || studentForm.controls.score1.dirty)"
+        />
+        <div *ngIf="studentForm.controls.score1.invalid && 
+        (studentForm.controls.score1.touched || studentForm.controls.score1.dirty)">
+          <small class="error-message" *ngIf="studentForm.controls.score1.hasError('min') || studentForm.controls.score1.hasError('max')">
+            Score 1 must be between 0 and 10
+          </small>
+          <small class="error-message" *ngIf="studentForm.controls.score1.hasError('required')">
+            Score 1 is required
+          </small>
+        </div>
+      </div>
+      <div class="form-group score__score">
+        <label for="score2">Score 2:</label>
+        <input
+          type="number"
+          class="form-control"
+          id="score2"
+          min='0'
+          max='10'
+          name='score2'
+          [(ngModel)]='student.score2'
+          formControlName='score2'
+          [class.valid]="studentForm.controls.score2.valid"
+          [class.invalid]="studentForm.controls.score2.invalid && 
+          (studentForm.controls.score2.touched || studentForm.controls.score2.dirty)"
+        />
+        <div *ngIf="studentForm.controls.score2.invalid && 
+        (studentForm.controls.score2.touched || studentForm.controls.score2.dirty)">
+          <small class="error-message" *ngIf="studentForm.controls.score2.hasError('min') || studentForm.controls.score2.hasError('max')">
+            Score 2 must be between 0 and 10
+          </small>
+          <small class="error-message" *ngIf="studentForm.controls.score2.hasError('required')">
+            Score 2 is required
+          </small>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary score__btn">Submit</button>
+  </form>
+</section>
