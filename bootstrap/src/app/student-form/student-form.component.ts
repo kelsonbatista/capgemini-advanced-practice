@@ -48,6 +48,7 @@ export class StudentFormComponent implements OnInit {
   getLastId() {
     const students = this.studentService.getAllStudents();
     const lastId: number = Math.max(...students.map((student: any) => student.id));
+    if (lastId == null) return 0;
     return lastId;
   }
 
