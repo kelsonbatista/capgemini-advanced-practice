@@ -1,4 +1,4 @@
-<section class="students">
+<section class="students" *ngIf="studentService.students.length > 0; else noStudent">
   <table class="table table-striped">
     <thead>
       <tr>
@@ -7,7 +7,6 @@
         <th scope="col">Score 2</th>
         <th scope="col">Average</th>
         <th scope="col">Status</th>
-        <th scope="col">Edit</th>
         <th scope="col">Delete</th>
       </tr>
     </thead>
@@ -18,9 +17,13 @@
         <td>{{ student.score2 }}</td>
         <td>{{ student.average }}</td>
         <td>{{ student.status == true ? "Aprovado" : "Reprovado" }}</td>
-        <td>Edit</td>
-        <td>Delete</td>
+        <td><a href='#' (click)="deleteOneStudent(student.id)">Delete</a></td>
       </tr>
     </tbody>
   </table>
 </section>
+<ng-template #noStudent>
+  <div class='nostudent'>
+    <h5>No student has been added.</h5>
+  </div>
+</ng-template>
