@@ -1,6 +1,6 @@
 const OFFLINE_VERSION = 1;
 const CACHE_NAME = 'offline';
-const OFFLINE_URL = 'offlinePage';
+const OFFLINE_URL = 'offlinePage.ejs';
 
 self.addEventListener('install', (event) => {
   event.waitUntil((async () => {
