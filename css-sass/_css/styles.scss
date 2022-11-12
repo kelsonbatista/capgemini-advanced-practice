@@ -1,19 +1,72 @@
-$blue: lightblue;
-$background: black;
+$cor: blue;
+$cor2: red;
+$cor3: green;
+$size: 20px;
+$width: 0.75;
 
-body {
-  background-color: $background;
-}
-
-.drop-shadow {
+@mixin drop-shadow() {
   text-shadow: 2px 1px 1px #ccc;
   text-decoration: underline;
 }
 
+body {
+  background-color: rgb(210, 212, 208);
+  width: percentage($width);
+  margin-left: 10%;
+}
+
+@mixin drop-shadow1($color: darkgreen, $backgroundColor: rgb(139, 74, 125)) {
+  @if($color == '') {
+    color: rgb(165, 33, 0);
+  } @else {
+    color: $color; 
+  }
+  text-shadow: 2px 1px 1px #ccc;
+  text-decoration: underline;
+  background-color: $backgroundColor;
+}
+
 h1 {
-  color: $blue;
+  @include drop-shadow();
+  color: $cor2;
+}
+
+h2 {
+  @include drop-shadow1('', #fff);
 }
 
 p {
-  color: $blue;
+  color: $cor;
+  b {
+    color: $cor2;
+  }
+}
+
+b {
+  color: lighten($cor2, 50);
+}
+
+#div-1 {
+  font-size: $size;
+  color: $cor3;
+}
+
+#div-2 {
+  font-size: $size + 5;
+  color: darken($cor3, 12);
+}
+
+#div-3 {
+  font-size: $size + 10;
+  color: darken($cor3, 80%);
+}
+
+a.button:link, a.button:visited, a {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+  width: 15%;
 }

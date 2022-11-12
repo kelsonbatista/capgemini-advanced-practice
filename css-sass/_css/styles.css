@@ -1,16 +1,54 @@
 body {
-  background-color: black;
-}
-
-.drop-shadow {
-  text-shadow: 2px 1px 1px #ccc;
-  text-decoration: underline;
+  background-color: rgb(210, 212, 208);
+  width: 75%;
+  margin-left: 10%;
 }
 
 h1 {
-  color: lightblue;
+  text-shadow: 2px 1px 1px #ccc;
+  text-decoration: underline;
+  color: red;
+}
+
+h2 {
+  color: rgb(165, 33, 0);
+  text-shadow: 2px 1px 1px #ccc;
+  text-decoration: underline;
+  background-color: #fff;
 }
 
 p {
-  color: lightblue;
+  color: blue;
+}
+p b {
+  color: red;
+}
+
+b {
+  color: white;
+}
+
+#div-1 {
+  font-size: 20px;
+  color: green;
+}
+
+#div-2 {
+  font-size: 25px;
+  color: #004300;
+}
+
+#div-3 {
+  font-size: 30px;
+  color: black;
+}
+
+a.button:link, a.button:visited, a {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+  width: 15%;
 }/*# sourceMappingURL=styles.css.map */
