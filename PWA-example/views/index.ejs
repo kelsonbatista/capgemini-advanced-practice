@@ -9,5 +9,13 @@
 <body>
   <h1>Home</h1>
   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui numquam corrupti ratione, est eum eius porro earum dolores reiciendis aspernatur labore alias placeat, maiores, rerum itaque? Voluptatem quis explicabo eos! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto tempore doloremque eum odit illum voluptatum vero. Minus voluptatibus, itaque in earum labore quis saepe atque dicta commodi suscipit repudiandae natus.</p>
+
+  <script>
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('generate-sw.js')
+        .then(reg => console.log('service worker registered'))
+        .catch(err => console.log('service worker not registered', err));
+    }
+  </script>
 </body>
 </html>
