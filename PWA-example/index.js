@@ -13,7 +13,7 @@ app.get('/', function(req, res) {
   res.render('../views/index');
 });
 
-app.get('/offlinePage', function(req, res) {
+app.get('/offlinepage', function(req, res) {
   res.render('../views/offlinePage');
 });
 
