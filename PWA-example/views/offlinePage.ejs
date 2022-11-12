@@ -8,5 +8,12 @@
 </head>
 <body>
   <h1>Offline Page 2</h1>
+  <script>
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('generate-sw.js')
+        .then(reg => console.log('service worker registered'))
+        .catch(err => console.log('service worker not registered', err));
+    }
+  </script>
 </body>
 </html>
